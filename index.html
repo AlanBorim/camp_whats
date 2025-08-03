@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Página de Acesso</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body, html {
+      height: 100%;
+      font-family: Arial, sans-serif;
+    }
+
+    .container {
+      display: flex;
+      height: 100vh;
+      flex-direction: row;
+    }
+
+    .left, .right {
+      flex: 1;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .left {
+      background-color: #f4f4f4;
+    }
+
+    .right {
+      background-color: #ffffff;
+      flex-direction: column;
+      gap: 30px;
+    }
+
+    .right img {
+      max-width: 200px;
+      height: auto;
+    }
+
+    .left a {
+      padding: 15px 30px;
+      background-color: #007BFF;
+      color: white;
+      font-size: 18px;
+      text-decoration: none;
+      border-radius: 5px;
+      transition: background-color 0.3s;
+    }
+
+    .left a:hover {
+      background-color: #0056b3;
+    }
+
+    @media (max-width: 768px) {
+      .container {
+        flex-direction: column;
+      }
+
+      .right {
+        flex: none;
+        height: auto;
+        padding: 40px 0;
+      }
+
+      .left {
+        flex: none;
+        height: auto;
+        padding: 40px 0;
+      }
+
+      .right img {
+        max-width: 150px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="right">
+      <img src="logo1.png" alt="Apoio19">
+      <img src="logo2.png" alt="Althaia">
+    </div>
+    <div class="left">
+      <a href="/dashboard.php">Acessar Dashboard</a>
+    </div>
+  </div>
+</body>
+</html>
